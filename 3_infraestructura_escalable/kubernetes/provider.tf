@@ -14,5 +14,5 @@ provider "google" {
 
 provider "google-beta" {
   project = "days-devops"
-  region = var.region
+  region  = var.region
 }

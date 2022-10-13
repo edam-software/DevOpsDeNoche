@@ -1,5 +1,6 @@
 proyectos = {
   devops = ["network-vpc", "devopsdays"]
+  desarrollo  = ["dev", "prod"]
 }
 
 servicios_devops_days = [

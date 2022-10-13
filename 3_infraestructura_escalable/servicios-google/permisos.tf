@@ -5,7 +5,7 @@
 resource "google_service_account_iam_binding" "workload_identity" {
   service_account_id = google_service_account.kubernetes.name
   role               = "roles/iam.workloadIdentityUser"
-  members            = [
+  members = [
     "serviceAccount:${google_service_account.kubernetes.email}"
   ]
 
@@ -21,7 +21,7 @@ resource "google_project_iam_member" "permisos_gke" {
   for_each = toset(var.roles_devops_days_gke)
   project  = "days-devops"
   role     = each.value
-  member  = "serviceAccount:${google_service_account.kubernetes.email}"
+  member   = "serviceAccount:${google_service_account.kubernetes.email}"
 
   condition {
     title       = "expires_after_2023_12_31"
@@ -44,7 +44,6 @@ resource "google_project_iam_member" "permisos_cloudbuild" {
   }
 
 }
-
 
 resource "google_project_iam_member" "permisos_grafana" {
   for_each = toset(var.roles_devops_days_grafana)

@@ -18,13 +18,11 @@ terraform {
 }
 
 provider "google" {
-  credentials = ".creds"
   region      = var.region
-  project = "days-devops"
+  project     = "days-devops"
 }
 
 provider "google-beta" {
-  credentials = ".creds"
-  region = var.region
-  project = "days-devops"
+  region      = var.region
+  project     = "days-devops"
 }

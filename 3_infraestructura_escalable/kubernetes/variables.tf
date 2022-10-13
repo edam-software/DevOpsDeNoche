@@ -1,13 +1,23 @@
+variable "project" {
+  type = string
+  description = "El proyecto de Google Cloud - variable compartida TF Cloud"
+}
+
 variable "entorno" {
   type        = string
-  description = "Entorno  - configurado en Terraform Cloud"
+  description = "Entorno - variable compartida TF Cloud"
+}
+
+# puede ser una region, pero es mas caro. cluster zonal es gratis en Free Tier
+variable "zone" {
+  type        = string
+  description = "Zona para desplegar Kubernetes y sus recursos - variable compartida TF Cloud"
 }
 
 variable "region" {
   type        = string
-  description = "Region para desplegar Red VPC y subnets - configurado en Terraform Cloud"
+  description = "Region para el Router Google - variable compartida TF Cloud"
 }
-
 
 variable "min_nodos" {
   type        = number
@@ -22,7 +32,7 @@ variable "max_nodos" {
 variable "tipo_maquina" {
   type        = string
   description = "Utilizar VMs de Google de este tipo"
-  default     =  "e2-medium"
+  default     = "e2-medium"
 }
 
 variable "spot" {
@@ -30,7 +40,6 @@ variable "spot" {
   description = "Utilizar VMs de Google efimeras y baratas (Preemptible)"
   default     = true
 }
-
 
 variable "acceso_publico" {
   type        = bool

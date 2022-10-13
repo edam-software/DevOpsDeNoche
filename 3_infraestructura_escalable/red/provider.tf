@@ -6,3 +6,13 @@ terraform {
     }
   }
 }
+
+provider "google" {
+  project = "days-devops"
+  region  = var.region
+}
+
+provider "google-beta" {
+  project = "days-devops"
+  region  = var.region
+}

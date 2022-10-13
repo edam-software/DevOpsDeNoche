@@ -4,16 +4,15 @@ data "google_service_account" "cloudbuild" {
 }
 
 resource "google_cloudbuild_trigger" "microservices" {
-  provider        = google-beta
-  location        = var.region
-  service_account = data.google_service_account.cloudbuild.id
-  filename        = "cloudbuild.yaml"
+  provider = google-beta
+  location = var.region
+  # service_account = data.google_service_account.cloudbuild.id
+  filename = "cloudbuild.yaml"
 
-   substitutions = {
-    _REGION = "us-central1"
-    _CLUSTER = "google-kubernetes-demo"
+  substitutions = {
+    _REGION  = "us-central1-a"
+    _CLUSTER = "google-kubernetes-dev"
   }
-
 
   github {
     owner = "edam-software"
@@ -21,11 +20,6 @@ resource "google_cloudbuild_trigger" "microservices" {
     push {
       branch = "^main$"
     }
-  }
-
-  options {
-    logging = "CLOUD_LOGGING_ONLY"
-
   }
 }
 

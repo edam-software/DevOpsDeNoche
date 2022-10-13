@@ -2,6 +2,7 @@ proyectos = {
   devops = ["network-vpc", "days"]
 }
 
+# si se cuenta con un Organizacion y cuenta pagada, para usar SharedVPC
 servicios_red_vpc = [
   "compute.googleapis.com",
   "iam.googleapis.com",
@@ -10,6 +11,7 @@ servicios_red_vpc = [
   "dns.googleapis.com"
 ]
 
+# servicios para desplegar Grafana, Kubernetes y la app ejemplo de Google Microservices (Boutique)
 servicios_devops_days = [
   "compute.googleapis.com",
   "iam.googleapis.com",
@@ -22,13 +24,18 @@ servicios_devops_days = [
   "dns.googleapis.com",
   "clouddeploy.googleapis.com",
   "monitoring.googleapis.com",
-  "artifactregistry.googleapis.com"
+  "artifactregistry.googleapis.com",
+  "monitoring.googleapis.com",
+  "cloudtrace.googleapis.com",
+  "clouddebugger.googleapis.com",
+  "cloudprofiler.googleapis.com"
 ]
 
 roles_devops_days_gke = [
   "roles/container.admin",
   "roles/speech.admin",
   "roles/secretmanager.admin",
+  "roles/storage.objectViewer"
 ]
 
 #  https://cloud.google.com/vpc/docs/shared-vpc#iam_in_shared_vpc
@@ -46,5 +53,5 @@ roles_devops_days_cloud_build = [
 ]
 
 roles_devops_days_grafana = [
- "roles/monitoring.viewer"
+  "roles/monitoring.viewer"
 ]

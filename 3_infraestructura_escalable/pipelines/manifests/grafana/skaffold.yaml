@@ -1,9 +1,9 @@
 apiVersion: skaffold/v2beta27
 kind: Config
 metadata:
-  name: pipelines
+  name: grafana
 deploy:
   kubectl:
     manifests:
-    - grafana.yaml
     - grafana-ingress.yaml
+    - grafana.yaml
