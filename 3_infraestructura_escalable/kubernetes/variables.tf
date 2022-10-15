@@ -1,5 +1,5 @@
 variable "project" {
-  type = string
+  type        = string
   description = "El proyecto de Google Cloud - variable compartida TF Cloud"
 }
 

@@ -18,11 +18,11 @@ terraform {
 }
 
 provider "google" {
-  region      = var.region
-  project     = "days-devops"
+  region  = var.region
+  project = "days-devops"
 }
 
 provider "google-beta" {
-  region      = var.region
-  project     = "days-devops"
+  region  = var.region
+  project = "days-devops"
 }

@@ -12,5 +12,5 @@ provider "tfe" {
 }
 
 data "tfe_organization" "sic-mundus" {
-  name  = var.tfe_org
+  name = var.tfe_org
 }

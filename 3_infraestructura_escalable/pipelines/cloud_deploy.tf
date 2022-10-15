@@ -36,7 +36,7 @@ resource "google_clouddeploy_delivery_pipeline" "primary" {
     }
 
     stages {
-      profiles = []
+      profiles  = []
       target_id = google_clouddeploy_target.secondary.name
     }
 
