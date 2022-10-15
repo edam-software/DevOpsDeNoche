@@ -1,7 +1,7 @@
 # DevOps de Noche :sunrise_over_mountains:
 
 ## :cloud: Un repositorio y presentación para DevOps Days La Paz 2022  
-Presentación en Apple Keynote:  DevOpsDeNoche.key
+Presentación en Apple Keynote:  https://www.youtube.com/watch?v=LOgSO0KcyTY
 
 ## Configuración completa de Google Cloud Platform y Google Kubernetes Engine :mountain_bicyclist:
 
