@@ -44,6 +44,7 @@ resource "tfe_workspace" "kubernetes-us-central1-a" {
 }
 
 resource "tfe_workspace" "kubernetes-us-central1-b" {
+  count                 = 0 # disable this cluster
   name                  = "devops-days-kubernetes-us-central1-b"
   organization          = data.tfe_organization.sic-mundus.name
   description           = "Workspace para Google Kubernetes Engine us-central1-b"
